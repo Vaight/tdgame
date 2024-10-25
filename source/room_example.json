@@ -1,0 +1,27 @@
+{
+    "xSize": 16,
+    "ySize": 10,
+    "image": "assets/sprites/world_tiles.png",
+    "defaultTile": {
+        "bounds": [0,0,16,16],
+        "collide": false
+    },
+    "tileData": {
+        "t0": {
+            "bounds": [16,0,16,16],
+            "collide": true
+        },
+        "t10": {
+            "bounds": [16,0,16,16],
+            "collide": true
+        },
+        "t20": {
+            "bounds": [16,0,16,16],
+            "collide": true
+        },
+        "t30": {
+            "bounds": [16,0,16,16],
+            "collide": true
+        }
+    }
+}

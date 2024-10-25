@@ -1,0 +1,59 @@
+html {
+    font-family: Calibri;
+    height: 100%;
+}
+
+body {
+    background-color: #121218;
+    color: white;
+    margin: 0;
+    padding: 0px;
+    height: 100%;
+}
+
+main {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: #3a3a4f;
+    padding: 5px;
+}
+
+canvas {
+    display: block;
+    border: 5px;
+    border-color: #3a3a4f;
+    border-style: inset;
+}
+
+.canvasholder {
+    color: white;
+    min-width: 640;
+    min-height: 480;
+    text-align: center;
+}
+
+button {
+    background-color: #121218;
+    border: 0px;
+    min-width: 50px;
+    color: white;
+    border-radius: 1cap;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: #121218;
+}
+
+button:active {
+    background-color: white;
+    color: white;
+    border-radius: 0.5cap;
+}
