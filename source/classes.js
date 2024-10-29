@@ -87,7 +87,6 @@ class WorldTile {
 
 class WorldMap {
     constructor(_roomjson, _ns) { 
-
         this.img       = loadImage(_roomjson.image)          // THE SPRITESHEET TO USE
         this.xTiles    = _roomjson.xSize;                    // THE NUMBER OF TILES IN WIDTH
         this.yTiles    = _roomjson.ySize;                    // THE NUMBER OF TILES IN HEIGHT
@@ -122,7 +121,6 @@ class WorldMap {
                 fill(255,0,0);
                 square(this.x, this.y, this.tileSize)
             }
-
         }
     }
 }
