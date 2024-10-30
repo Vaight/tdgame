@@ -75,13 +75,25 @@ class Entity { // A MOVABLE CHARACTER
     }
 }
 
+class WorldTileData {
+    constructor(_dat) {
+        this.bounds = _dat.bounds;
+        this.collide = _dat.collide;
+    }
+}
+
 class WorldTile {
     constructor(_x, _y, _data) {
-        this.x     = _x;            // X POSITION IN WORLDMAP
-        this.y     = _y;            // Y POSITION IN WORLDMAP
-        this.xW    = 0;             // GLOBAL X IN CANVAS
-        this.yW    = 0;             // GLOBAL Y IN CANVAS
-        this.data  = _data;         // DATA GAINED FROM JSON FILE ON LOAD
+        this.x     = _x;                        // X POSITION IN WORLDMAP
+        this.y     = _y;                        // Y POSITION IN WORLDMAP
+        this.xW    = 0;                         // GLOBAL X IN CANVAS
+        this.yW    = 0;                         // GLOBAL Y IN CANVAS
+        this.data  = new WorldTileData(_data)   // DATA GAINED FROM JSON FILE ON LOAD
+
+    }
+    setCollide() {
+        this.data.collide = true;
+        this.data.bounds = [16,0,16,16];
     }
 }
 
@@ -107,6 +119,13 @@ class WorldMap {
                 ct++
             }
         }
+
+        for (let i = 0; i < this.tiles.length; i++) {
+            print(i%_roomjson.ySize);
+            if (i%_roomjson.ySize == 0 || i < _roomjson.ySize || this.tiles.length - _roomjson.ySize < i || i%_roomjson.ySize == _roomjson.ySize - 1) {
+                this.tiles[i].setCollide();
+            }
+        }
     }
 
     draw() {
@@ -119,7 +138,7 @@ class WorldMap {
                 t.yW = this.y + t.y;
             } else {
                 fill(255,0,0);
-                square(this.x, this.y, this.tileSize)
+                square(this.x, this.y, this.tileSize);
             }
         }
     }
