@@ -93,7 +93,6 @@ class WorldTile {
     }
     setCollide() {
         this.data.collide = true;
-        this.data.bounds = [16,0,16,16];
     }
 }
 
@@ -111,7 +110,6 @@ class WorldMap {
         for (let i = 0; i < this.xTiles; i++) {
             for (let j = 0; j < this.yTiles; j++) {
                 if (_roomjson.tileData[str("t"+ct)]) {
-                    print("data found for tile "+ct);
                     this.tiles[ct] = new WorldTile(i*_ns, j*_ns, _roomjson.tileData[str("t"+ct)]);
                 } else {
                     this.tiles[ct] = new WorldTile(i*_ns, j*_ns, _roomjson.defaultTile);
@@ -121,8 +119,10 @@ class WorldMap {
         }
 
         for (let i = 0; i < this.tiles.length; i++) {
-            print(i%_roomjson.ySize);
             if (i%_roomjson.ySize == 0 || i < _roomjson.ySize || this.tiles.length - _roomjson.ySize < i || i%_roomjson.ySize == _roomjson.ySize - 1) {
+                if (this.tiles[i].data.bounds == _roomjson.defaultTile.bounds) {
+                    this.tiles[i].data.bounds = _roomjson.wallTile.bounds;
+                }
                 this.tiles[i].setCollide();
             }
         }

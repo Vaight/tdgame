@@ -1,0 +1,64 @@
+{
+    "xSize": 8,
+    "ySize": 10,
+    "image": "assets/sprites/world_tiles.png",
+    "addWalls": true,
+    "defaultTile": {
+        "bounds": [0,32,16,16],
+        "collide": false
+    },
+    "wallTile": {
+        "bounds": [16,0,16,16],
+        "collide": true
+    },
+    "tileData": {
+        "t10": {
+            "bounds": [0,0,16,16],
+            "collide": true
+        },
+        "t20": {
+            "bounds": [0,0,16,16],
+            "collide": true
+        },
+        "t30": {
+            "bounds": [0,0,16,16],
+            "collide": true
+        },
+        "t40": {
+            "bounds": [0,0,16,16],
+            "collide": true
+        },
+        "t50": {
+            "bounds": [0,0,16,16],
+            "collide": true
+        },
+        "t60": {
+            "bounds": [0,0,16,16],
+            "collide": true
+        },
+        "t11": {
+            "bounds": [0,16,16,16],
+            "collide": false
+        },
+        "t21": {
+            "bounds": [0,16,16,16],
+            "collide": false
+        },
+        "t31": {
+            "bounds": [0,16,16,16],
+            "collide": false
+        },
+        "t41": {
+            "bounds": [0,16,16,16],
+            "collide": false
+        },
+        "t51": {
+            "bounds": [0,16,16,16],
+            "collide": false
+        },
+        "t61": {
+            "bounds": [0,16,16,16],
+            "collide": false
+        }
+    }
+}

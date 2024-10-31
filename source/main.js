@@ -6,7 +6,7 @@ let world;
 
 function preload() {
     spriteImage = loadImage('assets/sprites/player.png')
-    roomExample = loadJSON('room_example.json')
+    roomExample = loadJSON('assets/rooms/room_example.json')
 }
 
 function setup() {
