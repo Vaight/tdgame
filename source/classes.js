@@ -119,12 +119,24 @@ class WorldMap {
         }
 
         for (let i = 0; i < this.tiles.length; i++) {
-            if (i%_roomjson.ySize == 0 || i < _roomjson.ySize || this.tiles.length - _roomjson.ySize < i || i%_roomjson.ySize == _roomjson.ySize - 1) {
-                if (this.tiles[i].data.bounds == _roomjson.defaultTile.bounds) {
-                    this.tiles[i].data.bounds = _roomjson.wallTile.bounds;
-                }
-                this.tiles[i].setCollide();
+            let tile = null;
+            if (i%_roomjson.ySize == 0) {
+                tile = _roomjson.wallTileNorth.bounds
+            } else if (i < _roomjson.ySize) {
+                tile = _roomjson.wallTileWest.bounds
+            } else if (this.tiles.length - _roomjson.ySize < i) {
+                tile = _roomjson.wallTileEast.bounds
+            } else if (i%_roomjson.ySize == _roomjson.ySize - 1) {
+                tile = _roomjson.wallTileSouth.bounds
             }
+
+            if (tile) {
+                this.tiles[i].setCollide();
+                if (this.tiles[i].data.bounds == _roomjson.defaultTile.bounds) {
+                    this.tiles[i].data.bounds = tile;
+                }
+            }
+
         }
     }
 

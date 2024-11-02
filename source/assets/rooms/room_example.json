@@ -4,60 +4,88 @@
     "image": "assets/sprites/world_tiles.png",
     "addWalls": true,
     "defaultTile": {
-        "bounds": [0,32,16,16],
+        "bounds": [0,0,16,16],
         "collide": false
     },
-    "wallTile": {
-        "bounds": [16,0,16,16],
+    "wallTileNorth": {
+        "bounds": [16,16,16,16],
+        "collide": true
+    },
+    "wallTileSouth": {
+        "bounds": [16,48,16,16],
+        "collide": true
+    },
+    "wallTileEast": {
+        "bounds": [32,32,16,16],
+        "collide": true
+    },
+    "wallTileWest": {
+        "bounds": [0,32,16,16],
         "collide": true
     },
     "tileData": {
-        "t10": {
-            "bounds": [0,0,16,16],
+        "t0": {
+            "bounds": [0,16,16,16],
             "collide": true
         },
-        "t20": {
-            "bounds": [0,0,16,16],
+        "t9": {
+            "bounds": [0,48,16,16],
             "collide": true
         },
-        "t30": {
-            "bounds": [0,0,16,16],
+        "t70": {
+            "bounds": [32,16,16,16],
             "collide": true
         },
-        "t40": {
-            "bounds": [0,0,16,16],
-            "collide": true
-        },
-        "t50": {
-            "bounds": [0,0,16,16],
-            "collide": true
-        },
-        "t60": {
-            "bounds": [0,0,16,16],
+        "t79": {
+            "bounds": [32,48,16,16],
             "collide": true
         },
         "t11": {
-            "bounds": [0,16,16,16],
-            "collide": false
+            "bounds": [16,0,16,16],
+            "collide": true
         },
         "t21": {
-            "bounds": [0,16,16,16],
-            "collide": false
+            "bounds": [16,0,16,16],
+            "collide": true
         },
         "t31": {
-            "bounds": [0,16,16,16],
-            "collide": false
+            "bounds": [16,0,16,16],
+            "collide": true
         },
         "t41": {
-            "bounds": [0,16,16,16],
-            "collide": false
+            "bounds": [16,0,16,16],
+            "collide": true
         },
         "t51": {
-            "bounds": [0,16,16,16],
-            "collide": false
+            "bounds": [16,0,16,16],
+            "collide": true
         },
         "t61": {
-            "bounds": [0,16,16,16],
+            "bounds": [16,0,16,16],
+            "collide": true
+        },
+        "t12": {
+            "bounds": [16,0,16,16],
+            "collide": false
+        },
+        "t22": {
+            "bounds": [16,0,16,16],
+            "collide": false
+        },
+        "t32": {
+            "bounds": [16,0,16,16],
+            "collide": false
+        },
+        "t42": {
+            "bounds": [16,0,16,16],
+            "collide": false
+        },
+        "t52": {
+            "bounds": [16,0,16,16],
+            "collide": false
+        },
+        "t62": {
+            "bounds": [16,0,16,16],
             "collide": false
         }
     }
