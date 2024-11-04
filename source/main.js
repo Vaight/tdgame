@@ -26,10 +26,15 @@ function draw() {
     background(0);
     world.draw();
     player.draw();
+    world.drawInFront();
     if (keyIsDown(UP_ARROW)    || keyIsDown(87)) { player.move(0,-1); }
     if (keyIsDown(DOWN_ARROW)  || keyIsDown(83)) { player.move(0,1);  }
     if (keyIsDown(LEFT_ARROW)  || keyIsDown(65)) { player.move(-1,0); }
     if (keyIsDown(RIGHT_ARROW) || keyIsDown(68)) { player.move(1,0);  }
+}
+
+function mouseClicked() {
+    world.checkInteractables();
 }
 
 function websiteInput(index) {

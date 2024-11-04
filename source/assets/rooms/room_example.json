@@ -65,28 +65,38 @@
             "collide": true
         },
         "t12": {
-            "bounds": [16,0,16,16],
+            "bounds": [32,0,16,16],
             "collide": false
         },
         "t22": {
-            "bounds": [16,0,16,16],
+            "bounds": [32,0,16,16],
             "collide": false
         },
         "t32": {
-            "bounds": [16,0,16,16],
+            "bounds": [32,0,16,16],
             "collide": false
         },
         "t42": {
-            "bounds": [16,0,16,16],
+            "bounds": [32,0,16,16],
             "collide": false
         },
         "t52": {
-            "bounds": [16,0,16,16],
+            "bounds": [32,0,16,16],
             "collide": false
         },
         "t62": {
-            "bounds": [16,0,16,16],
+            "bounds": [32,0,16,16],
             "collide": false
+        }
+    },
+    "interactableData": {
+        "t21": {
+            "renderInFront": false,
+            "type": "door",
+            "value": "assets/rooms/room_example.json",
+            "bounds": [48,0,16,32],
+            "width": 32,
+            "height": 64
         }
     }
 }
